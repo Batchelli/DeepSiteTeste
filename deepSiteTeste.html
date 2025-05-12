@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Açaí Nacional - O melhor açaí da região!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #faf5ff;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #6b21a8 0%, #9333ea 100%);
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        .menu-item:hover .menu-img {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(139, 92, 246, 0.3), 0 10px 10px -5px rgba(139, 92, 246, 0.1);
+        }
+        
+        .menu-img {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="gradient-bg text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-ice-cream text-3xl text-yellow-300"></i>
+                    <h1 class="text-2xl font-bold">Açaí Nacional</h1>
+                </div>
+                
+                <nav class="hidden md:block">
+                    <ul class="flex space-x-8">
+                        <li><a href="#home" class="hover:text-yellow-300 transition">Início</a></li>
+                        <li><a href="#menu" class="hover:text-yellow-300 transition">Cardápio</a></li>
+                        <li><a href="#about" class="hover:text-yellow-300 transition">Sobre</a></li>
+                        <li><a href="#contact" class="hover:text-yellow-300 transition">Contato</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-2">
+                <ul class="space-y-3">
+                    <li><a href="#home" class="block hover:text-yellow-300 transition">Início</a></li>
+                    <li><a href="#menu" class="block hover:text-yellow-300 transition">Cardápio</a></li>
+                    <li><a href="#about" class="block hover:text-yellow-300 transition">Sobre</a></li>
+                    <li><a href="#contact" class="block hover:text-yellow-300 transition">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg text-white py-16 md:py-24">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">O verdadeiro sabor da Amazônia</h2>
+                <p class="text-xl mb-8">Experimente nosso açaí cremoso, preparado com os melhores ingredientes e muito amor!</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#menu" class="bg-yellow-400 hover:bg-yellow-500 text-purple-900 font-bold py-3 px-6 rounded-full text-center transition pulse-animation">
+                        Ver Cardápio
+                    </a>
+                    <a href="#contact" class="border-2 border-white hover:bg-white hover:text-purple-900 font-bold py-3 px-6 rounded-full text-center transition">
+                        Faça seu pedido
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://www.amazonia.com/cdn/shop/articles/Acai_bowl_Energy_no_pack_CMYK.jpg?v=1598330120" 
+                     alt="Taça de açaí" 
+                     class="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover shadow-2xl border-4 border-white">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="bg-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-purple-900 mb-4">Por que escolher nosso açaí?</h2>
+                <div class="w-24 h-1 bg-purple-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center p-6 rounded-lg bg-purple-50 hover:shadow-lg transition">
+                    <div class="text-purple-600 mb-4">
+                        <i class="fas fa-leaf text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-purple-900 mb-2">100% Natural</h3>
+                    <p class="text-gray-600">Nosso açaí é feito com frutas selecionadas, sem conservantes ou aditivos artificiais.</p>
+                </div>
+                
+                <div class="text-center p-6 rounded-lg bg-purple-50 hover:shadow-lg transition">
+                    <div class="text-purple-600 mb-4">
+                        <i class="fas fa-heart text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-purple-900 mb-2">Opções Saudáveis</h3>
+                    <p class="text-gray-600">Temos versões light e zero açúcar para quem busca uma alimentação mais balanceada.</p>
+                </div>
+                
+                <div class="text-center p-6 rounded-lg bg-purple-50 hover:shadow-lg transition">
+                    <div class="text-purple-600 mb-4">
+                        <i class="fas fa-award text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-purple-900 mb-2">Qualidade Garantida</h3>
+                    <p class="text-gray-600">Processo rigoroso de seleção e preparo para garantir o melhor sabor e textura.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-16 bg-purple-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-purple-900 mb-4">Nosso Cardápio</h2>
+                <div class="w-24 h-1 bg-purple-500 mx-auto"></div>
+            </div>
+            
+            <div class="mb-8 flex justify-center">
+                <div class="inline-flex rounded-md shadow-sm">
+                    <button id="tab-classic" class="px-4 py-2 text-sm font-medium rounded-l-lg bg-purple-600 text-white">
+                        Clássicos
+                    </button>
+                    <button id="tab-light" class="px-4 py-2 text-sm font-medium bg-purple-100 text-purple-900">
+                        Light/Zero
+                    </button>
+                    <button id="tab-specials" class="px-4 py-2 text-sm font-medium rounded-r-lg bg-purple-100 text-purple-900">
+                        Especiais
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Classic Menu -->
+            <div id="classic-menu" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
+                    <div class="menu-img h-48 overflow-hidden">
+                        <img src="https://videos.openai.com/vg-assets/assets%2Ftask_01jv2842jmf0na7n76e08cdpz6%2F1747053628_img_2.webp?st=2025-05-12T11%3A33%3A18Z&se=2025-05-18T12%3A33%3A18Z&sks=b&skt=2025-05-12T11%3A33%3A18Z&ske=2025-05-18T12%3A33%3A18Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=3d249c53-07fa-4ba4-9b65-0bf8eb4ea46a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=%2F7tRzzAkg5N%2Fko3vcBKszLXc3xw26U3th2WFieUCNr8%3D&az=oaivgprodscus" 
+                             alt="Açaí tradicional" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-purple-900 mb-2">Açaí Tradicional</h3>
+                        <p class="text-gray-600 mb-4">O clássico açaí cremoso, acompanhado de banana e granola.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-purple-600">R$ 12,90</span>
+                            <button class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-full transition">
+                                Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
+                    <div class="menu-img h-48 overflow-hidden">
+                        <img src="https://videos.openai.com/vg-assets/assets%2Ftask_01jv28hdd4f5etjejmamzbq8zc%2F1747054071_img_3.webp?st=2025-05-12T11%3A30%3A50Z&se=2025-05-18T12%3A30%3A50Z&sks=b&skt=2025-05-12T11%3A30%3A50Z&ske=2025-05-18T12%3A30%3A50Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=3d249c53-07fa-4ba4-9b65-0bf8eb4ea46a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=LPGJ8hgz2bpdqtASwdzHhfmRmZFGzzyWRrBRBzRNxZo%3D&az=oaivgprodscus" 
+                             alt="Açaí com morango" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-purple-900 mb-2">Açaí com Morango</h3>
+                        <p class="text-gray-600 mb-4">Açaí cremoso com morangos frescos, leite condensado e granola.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-purple-600">R$ 15,90</span>
+                            <button class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-full transition">
+                                Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
+                    <div class="menu-img h-48 overflow-hidden">
+                        <img src="https://videos.openai.com/vg-assets/assets%2Ftask_01jv2937s8f02tx7zg4gk1z5yn%2F1747054656_img_0.webp?st=2025-05-12T11%3A32%3A03Z&se=2025-05-18T12%3A32%3A03Z&sks=b&skt=2025-05-12T11%3A32%3A03Z&ske=2025-05-18T12%3A32%3A03Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=3d249c53-07fa-4ba4-9b65-0bf8eb4ea46a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=GTgUqKP6EHVKWmBXL3q%2BZHHkrWDoBD4JJsuaf9SVxWQ%3D&az=oaivgprodscus" 
+                             alt="Açaí power" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-purple-900 mb-2">Açaí Power</h3>
+                        <p class="text-gray-600 mb-4">Açaí com mix de frutas, granola, castanhas e mel.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-purple-600">R$ 18,90</span>
+                            <button class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-full transition">
+                                Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Light/Zero Menu (hidden by default) -->
+            <div id="light-menu" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
+                    <div class="menu-img h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1560717842-5d3b3b2a3b0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                             alt="Açaí light" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-purple-900 mb-2">Açaí Light</h3>
+                        <p class="text-gray-600 mb-4">Açaí com adoçante natural, banana e granola integral.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-purple-600">R$ 14,90</span>
+                            <button class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-full transition">
+                                Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
+                    <div class="menu-img h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1550583720-4a6e6b5e5b0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                             alt="Açaí zero" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-purple-900 mb-2">Açaí Zero Açúcar</h3>
+                        <p class="text-gray-600 mb-4">Açaí sem adição de açúcar, com frutas vermelhas e granola zero.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-purple-600">R$ 16,90</span>
+                            <button class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-full transition">
+                                Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
+                    <div class="menu-img h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1550583720-4a6e6b5e5b0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                             alt="Açaí vegano" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-purple-900 mb-2">Açaí Vegano</h3>
+                        <p class="text-gray-600 mb-4">Açaí com leite de coco, frutas e melado de cana.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-purple-600">R$ 17,90</span>
+                            <button class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-full transition">
+                                Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Specials Menu (hidden by default) -->
+            <div id="specials-menu" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
+                    <div class="menu-img h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1550583720-4a6e6b5e5b0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                             alt="Açaí premium" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-purple-900 mb-2">Açaí Premium</h3>
+                        <p class="text-gray-600 mb-4">Açaí com mix de frutas exóticas, castanhas premium e mel silvestre.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-purple-600">R$ 22,90</span>
+                            <button class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-full transition">
+                                Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
+                    <div class="menu-img h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1550583720-4a6e6b5e5b0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                             alt="Açaí fit" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-purple-900 mb-2">Açaí Fit</h3>
+                        <p class="text-gray-600 mb-4">Açaí com whey protein, banana, aveia e pasta de amendoim.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-purple-600">R$ 20,90</span>
+                            <button class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-full transition">
+                                Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
+                    <div class="menu-img h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1550583720-4a6e6b5e5b0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                             alt="Açaí kids" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-purple-900 mb-2">Açaí Kids</h3>
+                        <p class="text-gray-600 mb-4">Porção especial para crianças, com confeitos coloridos e chantilly.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-purple-600">R$ 14,90</span>
+                            <button class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-full transition">
+                                Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <img src="https://proamazonia.com.br/wp-content/uploads/2024/05/acai-conheca-a-versatilidade-do-alimento-1.jpg" 
+                         alt="Loja Açaí Nacional" 
+                         class="rounded-lg shadow-lg w-full h-auto">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-purple-900 mb-6">Nossa História</h2>
+                    <p class="text-gray-600 mb-4">
+                        O Açaí Nacional nasceu da paixão pela cultura amazônica e pelo desejo de levar o verdadeiro sabor do açaí para todo o Brasil. 
+                        Desde 2010, nos dedicamos a selecionar os melhores frutos e preparar nossos produtos com muito cuidado e tradição.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        Nossa missão é oferecer não apenas um alimento saudável e saboroso, mas uma experiência única que conecta as pessoas com 
+                        as riquezas da nossa terra. Todos os nossos produtos são feitos com ingredientes naturais e muito amor!
+                    </p>
+                    <div class="flex space-x-4">
+                        <div class="bg-purple-100 p-4 rounded-lg text-center">
+                            <span class="text-2xl font-bold text-purple-600 block">10+</span>
+                            <span class="text-gray-600">Anos de experiência</span>
+                        </div>
+                        <div class="bg-purple-100 p-4 rounded-lg text-center">
+                            <span class="text-2xl font-bold text-purple-600 block">50+</span>
+                            <span class="text-gray-600">Sabores diferentes</span>
+                        </div>
+                        <div class="bg-purple-100 p-4 rounded-lg text-center">
+                            <span class="text-2xl font-bold text-purple-600 block">1000+</span>
+                            <span class="text-gray-600">Clientes satisfeitos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-purple-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-purple-900 mb-4">O que dizem nossos clientes</h2>
+                <div class="w-24 h-1 bg-purple-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"O melhor açaí que já provei! Sempre muito cremoso e com ótimos acompanhamentos. Minha família adora!"</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Cliente" class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <h4 class="font-bold text-purple-900">Ana Silva</h4>
+                            <p class="text-sm text-gray-500">Cliente há 3 anos</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Adoro as opções light! Como estou de dieta, o açaí zero açúcar salvou meus lanches da tarde."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Cliente" class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <h4 class="font-bold text-purple-900">Carlos Oliveira</h4>
+                            <p class="text-sm text-gray-500">Cliente há 1 ano</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Sempre peço o Açaí Power depois do treino. Energia pura e muito saboroso! Recomendo demais."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Cliente" class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <h4 class="font-bold text-purple-900">Juliana Santos</h4>
+                            <p class="text-sm text-gray-500">Cliente há 2 anos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-purple-900 mb-4">Entre em Contato</h2>
+                <div class="w-24 h-1 bg-purple-500 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h3 class="text-xl font-bold text-purple-900 mb-4">Nossos contatos</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="text-purple-600 mr-4 mt-1">
+                                <i class="fas fa-map-marker-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-purple-900">Endereço</h4>
+                                <p class="text-gray-600">Rua das Palmeiras, 123 - Centro<br>Manaus/AM</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-purple-600 mr-4 mt-1">
+                                <i class="fas fa-phone-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-purple-900">Telefone</h4>
+                                <p class="text-gray-600">(92) 1234-5678</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-purple-600 mr-4 mt-1">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-purple-900">Email</h4>
+                                <p class="text-gray-600">contato@acainacional.com.br</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-purple-600 mr-4 mt-1">
+                                <i class="fas fa-clock text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-purple-900">Horário de Funcionamento</h4>
+                                <p class="text-gray-600">Segunda a Sábado: 10h às 22h<br>Domingo: 12h às 20h</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold text-purple-900 mt-8 mb-4">Nos acompanhe</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-purple-100 hover:bg-purple-200 text-purple-600 w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="bg-purple-100 hover:bg-purple-200 text-purple-600 w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="bg-purple-100 hover:bg-purple-200 text-purple-600 w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <h3 class="text-xl font-bold text-purple-900 mb-4">Envie uma mensagem</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-gray-700 mb-1">Nome</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-gray-700 mb-1">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        </div>
+                        
+                        <div>
+                            <label for="phone" class="block text-gray-700 mb-1">Telefone</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-gray-700 mb-1">Mensagem</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg transition w-full">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-ice-cream text-2xl text-yellow-300"></i>
+                        <h2 class="text-xl font-bold">Açaí Nacional</h2>
+                    </div>
+                    <p class="mt-2 text-purple-100">O verdadeiro sabor da Amazônia!</p>
+                </div>
+                
+                <div class="flex flex-col items-center md:items-end">
+                    <p class="mb-2">© 2023 Açaí Nacional. Todos os direitos reservados.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-yellow-300 transition">Termos de Uso</a>
+                        <a href="#" class="hover:text-yellow-300 transition">Política de Privacidade</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Menu tabs functionality
+        const tabs = {
+            'tab-classic': 'classic-menu',
+            'tab-light': 'light-menu',
+            'tab-specials': 'specials-menu'
+        };
+
+        Object.keys(tabs).forEach(tabId => {
+            document.getElementById(tabId).addEventListener('click', function() {
+                // Reset all tabs
+                Object.keys(tabs).forEach(key => {
+                    document.getElementById(key).classList.remove('bg-purple-600', 'text-white');
+                    document.getElementById(key).classList.add('bg-purple-100', 'text-purple-900');
+                    document.getElementById(tabs[key]).classList.add('hidden');
+                });
+
+                // Activate current tab
+                this.classList.remove('bg-purple-100', 'text-purple-900');
+                this.classList.add('bg-purple-600', 'text-white');
+                document.getElementById(tabs[tabId]).classList.remove('hidden');
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
